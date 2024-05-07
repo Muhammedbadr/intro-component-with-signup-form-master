@@ -1,6 +1,6 @@
 let inputs = document.querySelectorAll(".form-btn input");
 let submit_btn = document.getElementById("submit-btn") 
-
+let icon = document.querySelectorAll(".icon")
 
 // check of value in inputs
 function firsandlanstname() {
@@ -135,57 +135,57 @@ submit_btn.addEventListener("click", ()=>{
             document.getElementById('lastname').value = '';
             document.getElementById('email').value = '';
             document.getElementById('password').value = '';
-        }, 1000);
+        }, 100);
     }
 
     })
 
 
-    // document.getElementById('showAlert').addEventListener("click", function () {
-    //     Swal.fire(
-    //         'Good job!',
-    //         'You clicked the button!',
-    //         'success'
-    //     );
-    // });
+    document.getElementById('showAlert').addEventListener("click", function () {
+        Swal.fire(
+            'Good job!',
+            'You clicked the button!',
+            'success'
+        );
+    });
 
 
 
-// // //submit btn
-// function submit() {
+// //submit btn
+function submit() {
 
-//     inputs.forEach(input => {
+    inputs.forEach(input => {
 
-//             if(input.value === ""){
-//                 msg.forEach(msg => {
-//                     msg.style.display = "block";
-//                 });
-//                 icon.forEach(icon => {
-//                     icon.style.opacity = 1;
-//                 });
+            if(input.value === ""){
+                msg.forEach(msg => {
+                    msg.style.display = "block";
+                });
+                icon.forEach(icon => {
+                    icon.style.opacity = 1;
+                });
 
-//                 return false;
-//             }else{
-//                 msg.forEach(msg => {
-//                     msg.style.display = "none";
-//                 });
-//                 icon.forEach(icon => {
-//                     icon.style.opacity = 0  ;
-//                 });
+                return false;
+            }else{
+                msg.forEach(msg => {
+                    msg.style.display = "none";
+                });
+                icon.forEach(icon => {
+                    icon.style.opacity = 0  ;
+                });
 
-//             }
+            }
             
            
-//         });
+        });
         
-//     };
+    };
     
     
 
 
-// function checkmail(msg,icon) 
+function checkmail(msg,icon) 
 
-// {
+{
 
 
 
@@ -193,21 +193,23 @@ submit_btn.addEventListener("click", ()=>{
     
 
 
-// }
+}
 
-// function firstname(){
+function firstname(){
 
-//     let firstname = document.getElementById("firstname").value
+    let firstname = document.getElementById("firstname").value
 
-//     if(firstname == '' || firstname.length <= 2 ) {
-//         msg.style.display = "block"; // Show the message
-//         icon.style.opacity = "1";     // Show the icon
-//     } else {
-//         msg.style.display = "none";  // Hide the message
-//         icon.style.opacity = "0";    // Hide the icon
-//         return; // Exit the function
-//     }
-// }
+    if(firstname == '' || firstname.length <= 2 ) {
+        msg.style.display = "block"; // Show the message
+        icon.style.opacity = "1";     // Show the icon
+    } else {
+        msg.style.display = "none";  // Hide the message
+        icon.style.opacity = "0";    // Hide the icon
+        return; // Exit the function
+    }
+}
 
-// document.querySelector('.signup-form').addEventListener('submit', firsandlanstname);
+document.querySelector('.signup-form').addEventListener('submit', firsandlanstname);
+
+
 
